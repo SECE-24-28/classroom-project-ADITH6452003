@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            this is a login pag using dom
+        </title>
+        <style>
+            form{
+                background-color: lightblue;
+                width: 400px;
+                padding: 20px;
+                margin-left: 400px;
+                margin-right: 400px;
+                box-shadow: 5px 5px 5px grey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="background-color: antiquewhite;box-shadow: 3px 5px 5px grey;text-align: center;margin-left: 400px;margin-right: 400px;">LOGIN HERE</h1>
+        <form onsubmit="myfunc(event)">
+            <label for="name">Name : </label>
+            <input type="text" id ="name" placeholder="name"><br><br>
+            <label for="email">Email : </label>
+            <input type="text" placeholder="Email" id="email"><br><br>
+            <label for="pass">Password : </label>
+            <input type="password" placeholder="Password" id="pass"><br><br>
+            <input type="submit">
+        </form>
+        <script>
+            function myfunc(e){
+                e.preventDefault();
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+                let pass=document.getElementById("pass").value;
+                console.log(`username = ${name} email = ${email} password = ${pass}`);
+                if(email === "" || pass === ""){
+                    alert("please fill all the details");
+                    return;
+                }
+                else{
+                    alert("login successful");
+                    window.location.href="welcome.html";
+                }
+            }
+        </script>
+    </body>
+</html>

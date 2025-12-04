@@ -36,12 +36,12 @@
     </head>
     <body>
         <h1 style="text-align: center; color: black;">Document object model</h1>
-        <form>
+        <form onsubmit="myfunc(event)">
             <label for ="email">Email: </label>
             <input type="text" id="email"><br><br>
             <label for="pass">password : </label>
-            <input type="password"><br><br>
-            <input type="submit" onsubmit="myfunc(event)">
+            <input type="password" id="pass"><br><br>
+            <input type="submit">
         </form>
         <script>
             function myfunc(e){
@@ -49,12 +49,12 @@
                 let email = document.getElementById("email").value;
                 let password = document.getElementById("pass").value;
                 console.log(`Email: ${email}, Password: ${password}`);
-                email.value="";
-                password.value="";
-                if(email =="" || password == ""){
+                if(email === "" || password === ""){
                     alert("field must not be empty");
                     return;
                 }
+                document.getElementById("email").value = "";
+                document.getElementById("pass").value = "";
                 alert("Form submitted successfully!");
             }
         </script>
