@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Adith </h1>
+        <p>Web Developer | Designer | Student</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer who loves building simple and clean websites.
+            I enjoy learning new technologies and creating cool projects.
+        </p>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>a autonomous rover to move around the fields</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>machine learning project to predict churn in a telecom company</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>a simple portfio webpage for home work</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: adithchandrasekar@gmail.com</p>
+    </section>
+    <footer>
+        <p>© 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
