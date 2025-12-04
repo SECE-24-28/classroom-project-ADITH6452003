@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Railway Ticket Form</title>
+<style>
+form{width:400px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;
+box-shadow:0 0 10px gray;}
+input,select{width:100%;padding:8px;margin:8px 0;}
+.error{color:red;}
+button{width:100%;padding:10px;background:#28a745;color:white;border:none;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Railway Reservation Form</h2>
+
+<form>
+    <label>Name:</label><input type="text" id="rName">
+    <label>Age:</label><input type="number" id="rAge">
+    <label>Gender:</label>
+    <select id="rGender">
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    <label>From:</label><input type="text" id="rFrom">
+    <label>To:</label><input type="text" id="rTo">
+    <label>Date:</label><input type="date" id="rDate">
+    <label>Class:</label>
+    <select id="rClass">
+        <option value="">Select</option>
+        <option>General</option>
+        <option>Sleeper</option>
+        <option>AC</option>
+    </select>
+    <label>Passengers:</label><input type="number" id="rPassengers">
+
+    <p class="error" id="rErr"></p>
+    <button type="button" onclick="railValidate()">Book Ticket</button>
+</form>
+
+<script>
+function railValidate(){
+    let n=rName.value.trim(), age=rAge.value, g=rGender.value;
+    let f=rFrom.value.trim(), t=rTo.value.trim(), d=rDate.value;
+    let c=rClass.value, p=rPassengers.value, err=rErr;
+
+    if(n==""||age==""||g==""||f==""||t==""||d==""||c==""||p==""){err.innerHTML="All fields required";return;}
+    if(age<=0||age>120){err.innerHTML="Enter valid age";return;}
+    if(p<=0){err.innerHTML="Passengers must be >0";return;}
+
+    err.innerHTML="Reservation Successful!"; err.style.color="green";
+
+    console.log("----- RAILWAY TICKET DETAILS -----");
+    console.log("Name:",n);
+    console.log("Age:",age);
+    console.log("Gender:",g);
+    console.log("From:",f);
+    console.log("To:",t);
+    console.log("Date:",d);
+    console.log("Class:",c);
+    console.log("Passengers:",p);
+    console.log("----------------------------------");
+}
+</script>
+
+</body>
+</html>

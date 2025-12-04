@@ -1,15 +1,15 @@
-# TODO List for Fixing JavaScript Functions
+# TODO for Login.html Enhancement
 
-## Assigment/login.html
+## Completed Tasks
 
-- [x] Fix function name from "myfinc" to "myfunc" to match the onsubmit call
-- [x] Correct clearing of input fields: use document.getElementById to set .value
-- [x] Fix validation condition to check for empty strings properly
-- [x] Prevent redirect if login fails
+- [x] Add 5 new input types to login.html form (Phone, Age, Date of Birth, Gender, Address)
+- [x] Update CSS styles to include new input types (tel, number, date, select)
+- [x] Modify JavaScript to capture and log all new input values to console
+- [x] Add evaluation (validation) for new fields (phone number format, age positivity)
+- [x] Ensure all fields are cleared after form submission
+- [x] Update validation logic to check all required fields
+- [x] Open login.html in browser for manual testing
 
-## DOM.html
+## Summary
 
-- [x] Move onsubmit from submit button to form element
-- [x] Add id="pass" to password input
-- [x] Correct clearing of input fields: use document.getElementById to set .value
-- [x] Improve validation condition for consistency
+The login.html page has been successfully enhanced with 5 additional input fields, console logging for all inputs, and basic validation for the new fields. The form now includes comprehensive user information collection with proper evaluation. The page has been opened in the browser for manual verification of functionality.

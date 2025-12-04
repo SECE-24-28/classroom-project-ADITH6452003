@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Registration Form</title>
+<style>
+form{width:400px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;
+box-shadow:0 0 10px gray;}
+input,select{width:100%;padding:8px;margin:8px 0;}
+.error{color:red;}
+button{width:100%;padding:10px;background:#6f42c1;color:white;border:none;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Exam Registration Form</h2>
+
+<form>
+    <label>Name:</label><input type="text" id="eName">
+    <label>Email:</label><input type="email" id="eEmail">
+    <label>Phone:</label><input type="text" id="ePhone">
+    <label>Date of Birth:</label><input type="date" id="eDob">
+    <label>Course:</label>
+    <select id="eCourse">
+        <option value="">Select</option>
+        <option>BCA</option>
+        <option>B.Sc</option>
+        <option>B.Tech</option>
+    </select>
+    <label>Exam Center:</label><input type="text" id="eCenter">
+    <label>Roll Number:</label><input type="text" id="eRoll">
+    <label>Address:</label><input type="text" id="eAddress">
+
+    <p class="error" id="eErr"></p>
+    <button type="button" onclick="examValidate()">Register</button>
+</form>
+
+<script>
+function examValidate(){
+    let n=eName.value.trim(), em=eEmail.value.trim(), ph=ePhone.value.trim();
+    let dob=eDob.value, course=eCourse.value, center=eCenter.value.trim();
+    let roll=eRoll.value.trim(), addr=eAddress.value.trim(), err=eErr;
+
+    if(n==""||em==""||ph==""||dob==""||course==""||center==""||roll==""||addr==""){
+        err.innerHTML="All fields required";return;
+    }
+    if(ph.length!=10){err.innerHTML="Phone must be 10 digits";return;}
+    if(!em.includes("@")){err.innerHTML="Enter valid email";return;}
+    if(roll.length<5){err.innerHTML="Roll number must be 5+ chars";return;}
+
+    err.innerHTML="Registration Successful!"; err.style.color="green";
+
+    console.log("----- EXAM REGISTRATION DETAILS -----");
+    console.log("Name:",n);
+    console.log("Email:",em);
+    console.log("Phone:",ph);
+    console.log("DOB:",dob);
+    console.log("Course:",course);
+    console.log("Center:",center);
+    console.log("Roll No:",roll);
+    console.log("Address:",addr);
+    console.log("-------------------------------------");
+}
+</script>
+
+</body>
+</html>
